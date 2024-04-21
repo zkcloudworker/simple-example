@@ -15,7 +15,7 @@ yarn deploy simple-example
 
 Import it, assuming it has been deployed to `workerPath`:
 ~~~
-  const { zkcloudworker } = await import(workerPath);
+  const simpleExample = await import(workerPath);
 ~~~
 
 Create the 'local' worker's context:
@@ -41,16 +41,16 @@ Create the 'local' worker's context:
   const cloud = new LocalCloud({ 
     job, 
     chain: "local", 
-    localWorker: zkcloudworker 
+    localWorker: simpleExample.zkcloudworker
   }); 
 ~~~
 
 Create the worker instance:
 ~~~
-  const worker = await zkcloudworker(cloud);
+  const worker = await simpleExample.zkcloudworker(cloud);
 ~~~
 
-And run the execute() method of the worker:
+And run the execute() method:
 ~~~
   const result = await worker.execute();
   console.log("Job result:", result);
