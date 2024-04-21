@@ -2,24 +2,35 @@
 
 A simple example of a worker running a ZkProgram.
 
-## Deploy it
+## Installation
 
-See the [zkcloudworker-local](https://github.com/zkcloudworker/zkcloudworker-local) repo.
+You need to install `node (v20+)` and `git` and clone this repo in the same 
+working dir where you installed the `zkcloudworker-local` repo.
+```
+git clone https://github.com/zkcloudworker/simple-example
+```
 
-From the `zkcloudworker-local` folder, run:
-~~~
+## Deploy
+
+In the `zkcloudworker-local` folder, run:
+```
+cd zkcloudworker-local
 yarn deploy simple-example
-~~~
+```
 
-## Use it
+See the 
+[zkcloudworker-local](https://github.com/zkcloudworker/zkcloudworker-local) 
+repo for more details. 
+
+## Run
 
 Import it, assuming it has been deployed to `workerPath`:
-~~~
-  const simpleExample = await import(workerPath);
-~~~
+```
+  const { zkcloudworker } = await import(workerPath);
+```
 
 Create the 'local' worker's context:
-~~~
+```
   const timeCreated = Date.now();
   const job: JobData = {
     id: "local",
@@ -41,13 +52,13 @@ Create the 'local' worker's context:
   const cloud = new LocalCloud({ 
     job, 
     chain: "local", 
-    localWorker: simpleExample.zkcloudworker
+    localWorker: zkcloudworker
   }); 
-~~~
+```
 
 Create the worker instance:
 ~~~
-  const worker = await simpleExample.zkcloudworker(cloud);
+  const worker = await zkcloudworker(cloud);
 ~~~
 
 And run the execute() method:
