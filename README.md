@@ -6,7 +6,9 @@ A simple example of a worker running a ZkProgram.
 
 You need to install `node (v20+)` and `git` and clone this repo in the same 
 working dir where you installed the `zkcloudworker-local` repo.
+For this examples we assume the working dir is `~/zkcloudworker`.
 ```
+cd ~/zkcloudworker
 git clone https://github.com/zkcloudworker/simple-example
 ```
 
@@ -14,6 +16,7 @@ git clone https://github.com/zkcloudworker/simple-example
 
 In the `zkcloudworker-local` folder, run:
 ```
+cd ~/zkcloudworker
 cd zkcloudworker-local
 yarn deploy simple-example
 ```
@@ -24,45 +27,9 @@ repo for more details.
 
 ## Run
 
-Import it, assuming it has been deployed to `workerPath`:
+In the `zkcloudworker-local` folder, run:
 ```
-  const { zkcloudworker } = await import(workerPath);
+cd ~/zkcloudworker
+cd zkcloudworker-local
+yarn start simple-example
 ```
-
-Create the 'local' worker's context:
-```
-  const timeCreated = Date.now();
-  const job: JobData = {
-    id: "local",
-    jobId: "jobId",
-    developer: "@dfst",
-    repo: "simple-example",
-    task: "example",
-    userId: "userId",
-    args: Math.ceil(Math.random() * 100).toString(),
-    metadata: "simple-example",
-    txNumber: 1,
-    timeCreated,
-    timeCreatedString: new Date(timeCreated).toISOString(),
-    timeStarted: timeCreated,
-    jobStatus: "started",
-    maxAttempts: 0,
-  } as JobData;
-  
-  const cloud = new LocalCloud({ 
-    job, 
-    chain: "local", 
-    localWorker: zkcloudworker
-  }); 
-```
-
-Create the worker instance:
-~~~
-  const worker = await zkcloudworker(cloud);
-~~~
-
-And run the execute() method:
-~~~
-  const result = await worker.execute();
-  console.log("Job result:", result);
-~~~
