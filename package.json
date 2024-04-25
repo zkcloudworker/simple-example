@@ -1,12 +1,12 @@
 {
   "name": "simple-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "DFST",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   },
   "jest": {
     "preset": "ts-jest",
@@ -17,7 +17,7 @@
   },
   "packageManager": "yarn@4.1.1",
   "dependencies": {
-    "o1js": "^0.18.0",
-    "zkcloudworker": "^0.3.17"
+    "o1js": "^1.0.1",
+    "zkcloudworker": "^0.4.3"
   }
 }

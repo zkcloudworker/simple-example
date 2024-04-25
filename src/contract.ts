@@ -6,7 +6,7 @@ export const ExampleZkApp = ZkProgram({
   methods: {
     check: {
       privateInputs: [Field],
-      method(value: Field) {
+      async method(value: Field) {
         value.assertLessThanOrEqual(Field(100));
       },
     },
