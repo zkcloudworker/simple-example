@@ -7,3 +7,4 @@ cache/
 .pnp.cjs
 .pnp.loader.mjs
 .vscode/
+.zkcloudworker/
