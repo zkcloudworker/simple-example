@@ -4,32 +4,37 @@ A simple example of a worker running a ZkProgram.
 
 ## Installation
 
-You need to install `node (v20+)` and `git` and clone this repo in the same 
-working dir where you installed the `zkcloudworker-local` repo.
-For this examples we assume the working dir is `~/zkcloudworker`.
+You need to install `node (v20+)` and `git` and clone this repo
+
 ```
-cd ~/zkcloudworker
 git clone https://github.com/zkcloudworker/simple-example
+cd simple-example
 ```
 
 ## Deploy
 
-In the `zkcloudworker-local` folder, run:
-```
-cd ~/zkcloudworker
-cd zkcloudworker-local
-yarn deploy simple-example
+Install zkCloudWorker CLI tool
+
+```sh
+npm install -g zkcloudworker-cli
 ```
 
-See the 
-[zkcloudworker-local](https://github.com/zkcloudworker/zkcloudworker-local) 
-repo for more details. 
+Deploy this repo to zkCloudWorker cloud
 
-## Run
-
-In the `zkcloudworker-local` folder, run:
+```sh
+zkcw deploy
 ```
-cd ~/zkcloudworker
-cd zkcloudworker-local
-yarn start simple-example
+
+or, in verbose mode
+
+```sh
+zkcw deploy -v
+```
+
+## Run proof creation
+
+Run:
+
+```sh
+yarn start
 ```
