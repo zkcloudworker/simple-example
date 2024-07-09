@@ -5,12 +5,12 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@types/node@npm:^20.12.11":
-  version: 20.12.11
-  resolution: "@types/node@npm:20.12.11"
+"@types/node@npm:^20.14.10":
+  version: 20.14.10
+  resolution: "@types/node@npm:20.14.10"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/efaa7b08c50ba6e6982ac7d531ba08d5935539ba76e954807df1ff9382a319ead7e003ccaca5ad7cf33ecf53f212507f7c1f2794bd2ff52df6365fef21f6e1fb
+  checksum: 10c0/0b06cff14365c2d0085dc16cc8cbea5c40ec09cfc1fea966be9eeecf35562760bfde8f88e86de6edfaf394501236e229d9c1084fad04fb4dec472ae245d8ae69
   languageName: node
   linkType: hard
 
@@ -30,14 +30,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.8":
-  version: 1.6.8
-  resolution: "axios@npm:1.6.8"
+"axios@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "axios@npm:1.7.2"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/0f22da6f490335479a89878bc7d5a1419484fbb437b564a80c34888fc36759ae4f56ea28d55a191695e5ed327f0bad56e7ff60fb6770c14d1be6501505d47ab9
+  checksum: 10c0/cbd47ce380fe045313364e740bb03b936420b8b5558c7ea36a4563db1258c658f05e40feb5ddd41f6633fdd96d37ac2a76f884dad599c5b0224b4c451b3fa7ae
   languageName: node
   linkType: hard
 
@@ -158,12 +158,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nats@npm:^2.24.0":
-  version: 2.24.0
-  resolution: "nats@npm:2.24.0"
+"nats@npm:^2.27.0":
+  version: 2.28.0
+  resolution: "nats@npm:2.28.0"
   dependencies:
     nkeys.js: "npm:1.1.0"
-  checksum: 10c0/fbe137144d10c9553e6ec02500a8a7475885e0580fd5862854dca469baaf54c2607f597c32d60b53751f95c7b0d0d3b8d1f5c227482ff098af2f444a4b2c1c9a
+  checksum: 10c0/a14738a8e2730f76e164e3debf99d5d7d10ca93346e87c7e4c3e56ac81167be1565baae92bb5785f374c0483c79e29879984fda76a21a1de0d5f1f047c0535bb
   languageName: node
   linkType: hard
 
@@ -190,9 +190,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"o1js@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "o1js@npm:1.1.0"
+"o1js@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "o1js@npm:1.4.0"
   dependencies:
     blakejs: "npm:1.2.1"
     cachedir: "npm:^2.4.0"
@@ -202,7 +202,7 @@ __metadata:
     tslib: "npm:^2.3.0"
   bin:
     snarky-run: src/build/run.js
-  checksum: 10c0/cac9302989290686e03231dec7e2879715dc593722296726f5c802a18180b8fce75b5fa23c3c651d89b6c1f3fa43275a3e9043f84d6871665942a3e54877c064
+  checksum: 10c0/5c193005bb73fdb14c9af5ebf8512a850c42bf1c4123932d75a88f31a8962b4fdf01215f191690dd09a13921c8e8332b4684486bc1782e1761cbc38408cf7ee8
   languageName: node
   linkType: hard
 
@@ -224,10 +224,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "simple-example@workspace:."
   dependencies:
-    "@types/node": "npm:^20.12.11"
-    o1js: "npm:^1.1.0"
-    typescript: "npm:^5.4.5"
-    zkcloudworker: "npm:^0.5.2"
+    "@types/node": "npm:^20.14.10"
+    o1js: "npm:^1.4.0"
+    typescript: "npm:^5.5.3"
+    zkcloudworker: "npm:^0.12.2"
   languageName: unknown
   linkType: soft
 
@@ -248,9 +248,9 @@ __metadata:
   linkType: hard
 
 "tslib@npm:^2.3.0":
-  version: 2.6.2
-  resolution: "tslib@npm:2.6.2"
-  checksum: 10c0/e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
+  version: 2.6.3
+  resolution: "tslib@npm:2.6.3"
+  checksum: 10c0/2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
   languageName: node
   linkType: hard
 
@@ -261,23 +261,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.4.5":
-  version: 5.4.5
-  resolution: "typescript@npm:5.4.5"
+"typescript@npm:^5.5.3":
+  version: 5.5.3
+  resolution: "typescript@npm:5.5.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/2954022ada340fd3d6a9e2b8e534f65d57c92d5f3989a263754a78aba549f7e6529acc1921913560a4b816c46dce7df4a4d29f9f11a3dc0d4213bb76d043251e
+  checksum: 10c0/f52c71ccbc7080b034b9d3b72051d563601a4815bf3e39ded188e6ce60813f75dbedf11ad15dd4d32a12996a9ed8c7155b46c93a9b9c9bad1049766fe614bbdd
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
-  version: 5.4.5
-  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
+"typescript@patch:typescript@npm%3A^5.5.3#optional!builtin<compat/typescript>":
+  version: 5.5.3
+  resolution: "typescript@patch:typescript@npm%3A5.5.3#optional!builtin<compat/typescript>::version=5.5.3&hash=b45daf"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/db2ad2a16ca829f50427eeb1da155e7a45e598eec7b086d8b4e8ba44e5a235f758e606d681c66992230d3fc3b8995865e5fd0b22a2c95486d0b3200f83072ec9
+  checksum: 10c0/5a437c416251334deeaf29897157032311f3f126547cfdc4b133768b606cb0e62bcee733bb97cf74c42fe7268801aea1392d8e40988cdef112e9546eba4c03c5
   languageName: node
   linkType: hard
 
@@ -312,15 +312,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zkcloudworker@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "zkcloudworker@npm:0.5.2"
+"zkcloudworker@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "zkcloudworker@npm:0.12.2"
   dependencies:
-    axios: "npm:^1.6.8"
+    axios: "npm:^1.7.2"
     chalk: "npm:^4.1.2"
-    nats: "npm:^2.24.0"
+    nats: "npm:^2.27.0"
   peerDependencies:
-    o1js: ^1.1.0
-  checksum: 10c0/bce26210938b635079504901234bfd192763e2969e6ad38d8ab518b441def3361d82befd75943837c7e9f13d8a963d31fd23ab3425c32684e5b4f3981aec4ff4
+    o1js: ^1.4.0
+  checksum: 10c0/2b1f19279409001cbde92a83711570c18ff6ec3a787fefaabbb6c4c6fbe4d923d32e6cffd07eb3efeecd809604f1ddeeae4214aed38e6ce4ad46287d2cb1f437
   languageName: node
   linkType: hard

@@ -1,13 +1,15 @@
 import { zkCloudWorkerClient } from "zkcloudworker";
+import { JWT } from "../env.json";
 
 async function main() {
   console.log(
     `zkCloudWorker Simple Example (c) DFST 2024 www.zkcloudworker.com\n`
   );
-  const JWT =
-    process.env.JWT ??
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTkwMzQ5NDYiLCJpYXQiOjE3MDEzNTY5NzEsImV4cCI6MTczMjg5Mjk3MX0.r94tKntDvLpPJT2zzEe7HMUcOAQYQu3zWNuyFFiChD0";
-
+  if (JWT === undefined) {
+    throw new Error(
+      "JWT is undefined, please provide a valid JWT in env.json file."
+    );
+  }
   const api = new zkCloudWorkerClient({
     jwt: JWT,
   });
@@ -28,7 +30,7 @@ async function main() {
     throw new Error("Job ID is undefined");
   }
 
-  const result = await api.waitForJobResult({ jobId });
+  const result = await api.waitForJobResult({ jobId, printLogs: true });
   console.log("Job result:", result);
 }
 
